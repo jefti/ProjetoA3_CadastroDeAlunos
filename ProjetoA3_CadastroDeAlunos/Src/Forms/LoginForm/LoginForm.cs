@@ -27,6 +27,8 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
         {
             LandingPage frm = new LandingPage();
             frm.Show();
+            this.Hide();
+            frm.FormClosed += (s, args) => this.Close();
         }
     }
 }
