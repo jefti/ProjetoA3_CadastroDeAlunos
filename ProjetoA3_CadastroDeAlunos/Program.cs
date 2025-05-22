@@ -1,3 +1,5 @@
+using ProjetoA3_CadastroDeAlunos.Forms.LoginForm;
+
 namespace ProjetoA3_CadastroDeAlunos
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace ProjetoA3_CadastroDeAlunos
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }
