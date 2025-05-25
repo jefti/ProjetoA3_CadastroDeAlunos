@@ -33,14 +33,14 @@
             textBox2 = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            login_lnklbl_register = new LinkLabel();
             SuspendLayout();
             // 
             // Login_btn_logar
             // 
-            Login_btn_logar.Location = new Point(302, 230);
-            Login_btn_logar.Margin = new Padding(3, 2, 3, 2);
+            Login_btn_logar.Location = new Point(345, 281);
             Login_btn_logar.Name = "Login_btn_logar";
-            Login_btn_logar.Size = new Size(100, 22);
+            Login_btn_logar.Size = new Size(114, 29);
             Login_btn_logar.TabIndex = 0;
             Login_btn_logar.Text = "Entrar";
             Login_btn_logar.UseVisualStyleBackColor = true;
@@ -48,49 +48,62 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(302, 124);
+            textBox1.Location = new Point(345, 165);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(114, 27);
             textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(302, 173);
+            textBox2.Location = new Point(345, 231);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(114, 27);
             textBox2.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(238, 132);
+            label1.Location = new Point(272, 176);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(50, 20);
             label1.TabIndex = 3;
             label1.Text = "label1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(238, 173);
+            label2.Location = new Point(272, 231);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(50, 20);
             label2.TabIndex = 3;
             label2.Text = "label1";
             // 
+            // login_lnklbl_register
+            // 
+            login_lnklbl_register.AutoSize = true;
+            login_lnklbl_register.Location = new Point(345, 323);
+            login_lnklbl_register.Name = "login_lnklbl_register";
+            login_lnklbl_register.Size = new Size(127, 20);
+            login_lnklbl_register.TabIndex = 4;
+            login_lnklbl_register.TabStop = true;
+            login_lnklbl_register.Text = "Realizar cadastro!";
+            login_lnklbl_register.LinkClicked += login_lnklbl_register_LinkClicked;
+            // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(719, 338);
+            ClientSize = new Size(819, 440);
+            Controls.Add(login_lnklbl_register);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(Login_btn_logar);
-            Margin = new Padding(3, 2, 3, 2);
-            MaximumSize = new Size(735, 377);
-            MinimumSize = new Size(735, 377);
+            MaximumSize = new Size(837, 487);
+            MinimumSize = new Size(837, 487);
             Name = "LoginForm";
             Text = "LoginForm";
             Load += LoginForm_Load;
@@ -105,5 +118,6 @@
         private TextBox textBox2;
         private Label label1;
         private Label label2;
+        private LinkLabel login_lnklbl_register;
     }
 }

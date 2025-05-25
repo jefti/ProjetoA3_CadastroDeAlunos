@@ -91,5 +91,6 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
             frm.FormClosed += (s, args) => this.Close();
         }
+
     }
 }

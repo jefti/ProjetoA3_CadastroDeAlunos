@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ProjetoA3_CadastroDeAlunos.Src.Forms.Login;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage;
 using ProjetoA3_CadastroDeAlunos.Src.Repositories;
 
@@ -46,6 +47,15 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void login_lnklbl_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistrationForm frm = new RegistrationForm();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
         }
     }
 }
