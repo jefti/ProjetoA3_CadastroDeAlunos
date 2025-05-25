@@ -1,15 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage;
 using ProjetoA3_CadastroDeAlunos.Src.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 {
@@ -34,10 +25,7 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
-                        {
-                            MessageBox.Show(reader["Nome"].ToString());
-                        }
+
                     }
                 }
             }
@@ -53,6 +41,11 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
             frm.Show();
             this.Hide();
             frm.FormClosed += (s, args) => this.Close();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
