@@ -60,10 +60,10 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
                     {
                         command.Parameters.AddWithValue("@Nome", nome);
                         command.Parameters.AddWithValue("@Cpf", cpf);
-                        command.Parameters.AddWithValue("@Phone", phone);
-                        command.Parameters.AddWithValue("@Password", password);
+                        command.Parameters.AddWithValue("@Telefon", phone);
+                        command.Parameters.AddWithValue("@Senha", password);
                         command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@Address", address);
+                        command.Parameters.AddWithValue("@Endereco", address);
 
                         int rowsAffected = command.ExecuteNonQuery();
 
