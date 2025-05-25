@@ -53,8 +53,8 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO Aluno (Nome, Cpf, Phone, Password, Email, Address) " +
-                                   "VALUES (@Nome, @Cpf, @Phone, @Password, @Email, @Address);";
+                    string query = "INSERT INTO Aluno (Nome, Cpf, Telefone, Senha, Email, Endereco) " +
+                                   "VALUES (@Nome, @Cpf, @Telefone, @Senha, @Email, @Endereco);";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
