@@ -60,7 +60,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
                     {
                         command.Parameters.AddWithValue("@Nome", nome);
                         command.Parameters.AddWithValue("@Cpf", cpf);
-                        command.Parameters.AddWithValue("@Telefon", phone);
+                        command.Parameters.AddWithValue("@Telefone", phone);
                         command.Parameters.AddWithValue("@Senha", password);
                         command.Parameters.AddWithValue("@Email", email);
                         command.Parameters.AddWithValue("@Endereco", address);
