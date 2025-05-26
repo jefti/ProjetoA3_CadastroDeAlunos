@@ -5,6 +5,7 @@ using ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.HistoricalPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.TeacherRegisterPage;
+using ProjetoA3_CadastroDeAlunos.Src.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,6 +86,9 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
+            UserSession.Logout();
+
             LoginForm frm = new LoginForm();
             frm.Show();
             this.Hide();

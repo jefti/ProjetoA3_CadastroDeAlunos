@@ -19,6 +19,7 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 
         private void Login_btn_logar_Click(object sender, EventArgs e)
         {
+
             string email = Lgn_txt_email.Text;
             string password = Lgn_txt_senha.Text;
             try
@@ -41,6 +42,13 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
                         {
                             if (reader.Read())
                             {
+                                UserSession.IdAluno = reader.GetInt32(reader.GetOrdinal("IdAluno"));
+                                UserSession.Nome = reader.GetString(reader.GetOrdinal("Nome"));
+                                UserSession.Cpf = reader.GetString(reader.GetOrdinal("Cpf"));
+                                UserSession.Email = reader.GetString(reader.GetOrdinal("Email"));
+                                UserSession.Telefone = reader.GetString(reader.GetOrdinal("Telefone"));
+                                UserSession.Endereco = reader.GetString(reader.GetOrdinal("Endereco"));
+
                                 this.NavToLandingPage();
                             }
                             else
