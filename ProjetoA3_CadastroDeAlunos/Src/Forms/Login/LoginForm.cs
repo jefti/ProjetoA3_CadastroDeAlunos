@@ -14,26 +14,7 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            try
-            {
-                using (MySqlConnection connection = Connection.GetConnection())
-                {
-                    connection.Open();
 
-                    // Exemplo de comando SQL
-                    string query = "SELECT * FROM aluno";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Erro ao conectar ao MySQL: " + ex.Message);
-            }
         }
 
         private void Login_btn_logar_Click(object sender, EventArgs e)
@@ -81,10 +62,7 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void login_lnklbl_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -95,10 +73,7 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
             frm.FormClosed += (s, args) => this.Close();
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
 
-        }
         private void NavToLandingPage()
         {
             LandingPage frm = new LandingPage();

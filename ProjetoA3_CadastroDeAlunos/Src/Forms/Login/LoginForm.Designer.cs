@@ -92,7 +92,7 @@
             Lgn_txt_senha.PasswordChar = '*';
             Lgn_txt_senha.Size = new Size(212, 23);
             Lgn_txt_senha.TabIndex = 5;
-            Lgn_txt_senha.MaskInputRejected += maskedTextBox1_MaskInputRejected;
+           
             // 
             // LoginForm
             // 
