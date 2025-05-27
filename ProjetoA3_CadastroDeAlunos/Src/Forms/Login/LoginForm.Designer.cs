@@ -32,8 +32,8 @@
             Lgn_txt_email = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            login_lnklbl_register = new LinkLabel();
             Lgn_txt_senha = new MaskedTextBox();
+            login_lnklbl_register = new LinkLabel();
             SuspendLayout();
             // 
             // Login_btn_logar
@@ -74,17 +74,6 @@
             label2.TabIndex = 3;
             label2.Text = "Senha:";
             // 
-            // login_lnklbl_register
-            // 
-            login_lnklbl_register.AutoSize = true;
-            login_lnklbl_register.Location = new Point(240, 224);
-            login_lnklbl_register.Name = "login_lnklbl_register";
-            login_lnklbl_register.Size = new Size(98, 15);
-            login_lnklbl_register.TabIndex = 4;
-            login_lnklbl_register.TabStop = true;
-            login_lnklbl_register.Text = "Realizar cadastro!";
-            login_lnklbl_register.LinkClicked += login_lnklbl_register_LinkClicked;
-            // 
             // Lgn_txt_senha
             // 
             Lgn_txt_senha.Location = new Point(264, 170);
@@ -92,15 +81,25 @@
             Lgn_txt_senha.PasswordChar = '*';
             Lgn_txt_senha.Size = new Size(212, 23);
             Lgn_txt_senha.TabIndex = 5;
-           
+            // 
+            // login_lnklbl_register
+            // 
+            login_lnklbl_register.AutoSize = true;
+            login_lnklbl_register.Location = new Point(264, 227);
+            login_lnklbl_register.Name = "login_lnklbl_register";
+            login_lnklbl_register.Size = new Size(98, 15);
+            login_lnklbl_register.TabIndex = 6;
+            login_lnklbl_register.TabStop = true;
+            login_lnklbl_register.Text = "Realizar cadastro!";
+            login_lnklbl_register.LinkClicked += login_lnklbl_register_LinkClicked_1;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(718, 336);
-            Controls.Add(Lgn_txt_senha);
             Controls.Add(login_lnklbl_register);
+            Controls.Add(Lgn_txt_senha);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Lgn_txt_email);
@@ -110,6 +109,7 @@
             MinimumSize = new Size(734, 375);
             Name = "LoginForm";
             Text = "LoginForm";
+            TopMost = true;
             Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -121,7 +121,7 @@
         private TextBox Lgn_txt_email;
         private Label label1;
         private Label label2;
-        private LinkLabel login_lnklbl_register;
         private MaskedTextBox Lgn_txt_senha;
+        private LinkLabel login_lnklbl_register;
     }
 }

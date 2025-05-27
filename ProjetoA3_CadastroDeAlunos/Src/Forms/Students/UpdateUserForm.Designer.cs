@@ -1,6 +1,6 @@
-﻿namespace ProjetoA3_CadastroDeAlunos.Src.Forms.HistoricalPage
+﻿namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Students
 {
-    partial class HistoricalPage
+    partial class UpdateUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,15 @@
         {
             SuspendLayout();
             // 
-            // HistoricalPage
+            // UpdateUserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "HistoricalPage";
-            Text = "HistoricalPage";
-            Load += HistoricalPage_Load;
+            Name = "UpdateUserForm";
+            Text = "UpdateUserForm";
+            Load += UpdateUserForm_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
