@@ -39,13 +39,13 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
             Reg_msktxt_telefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             Reg_msktxt_senha.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
-            string nome = Reg_txt_nome.Text;
-            string cpf = Reg_msktxt_cpf.Text;
-            string phone = Reg_msktxt_telefone.Text;
-            string password = Reg_msktxt_senha.Text;
-            string email = Reg_txt_email.Text;
-            string address = Reg_txt_endereco.Text;
-
+            string nome = Reg_txt_nome.Text.Trim();
+            string cpf = Reg_msktxt_cpf.Text.Trim();
+            string phone = Reg_msktxt_telefone.Text.Trim();
+            string password = Reg_msktxt_senha.Text.Trim();
+            string email = Reg_txt_email.Text.Trim();
+            string address = Reg_txt_endereco.Text.Trim();
+            string tipo = "aluno";
 
             try
             {
@@ -53,28 +53,70 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO Aluno (Nome, Cpf, Telefone, Senha, Email, Endereco) " +
-                                   "VALUES (@Nome, @Cpf, @Telefone, @Senha, @Email, @Endereco);";
+                    //Passo 1: Checar campos que não podem se repetir (CPF, Email e Telefone)
+                    string checkUserQuery = @"SELECT COUNT(*) FROM Usuario 
+                          WHERE Email = @Email OR Cpf = @Cpf OR Telefone = @Telefone";
 
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    using (MySqlCommand checkCommand = new MySqlCommand(checkUserQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@Nome", nome);
-                        command.Parameters.AddWithValue("@Cpf", cpf);
-                        command.Parameters.AddWithValue("@Telefone", phone);
-                        command.Parameters.AddWithValue("@Senha", password);
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@Endereco", address);
+                        checkCommand.Parameters.AddWithValue("@Email", email);
+                        checkCommand.Parameters.AddWithValue("@Cpf", cpf);
+                        checkCommand.Parameters.AddWithValue("@Telefone", phone);
 
-                        int rowsAffected = command.ExecuteNonQuery();
+                        int exists = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (exists > 0)
+                        {
+                            MessageBox.Show("Já existe um usuário com o mesmo e-mail, CPF ou telefone.");
+                            return;
+                        }
+                    }
 
-                        if (rowsAffected > 0)
+                    //Passo 2: Inserir o usuario
+                    string insertUserQuery = @"INSERT INTO Usuario (Email, Senha, Nome, Cpf, Telefone, Tipo, Endereco)
+                                       VALUES (@Email, @Senha, @Nome, @Cpf, @Telefone, @Tipo, @Endereco);";
+
+                    using (MySqlCommand userCommand = new MySqlCommand(insertUserQuery, connection))
+                    {
+                        userCommand.Parameters.AddWithValue("@Email", email);
+                        userCommand.Parameters.AddWithValue("@Senha", password);
+                        userCommand.Parameters.AddWithValue("@Nome", nome);
+                        userCommand.Parameters.AddWithValue("@Cpf", cpf);
+                        userCommand.Parameters.AddWithValue("@Telefone", phone);
+                        userCommand.Parameters.AddWithValue("@Tipo", tipo);
+                        userCommand.Parameters.AddWithValue("@Endereco", address);
+
+                        int userRows = userCommand.ExecuteNonQuery();
+
+                        if (userRows == 0)
+                        {
+                            MessageBox.Show("Falha ao cadastrar usuário.");
+                            return;
+                        }
+                    }
+
+                    long userId;
+                    using (MySqlCommand idCommand = new MySqlCommand("SELECT LAST_INSERT_ID();", connection))
+                    {
+                        userId = Convert.ToInt64(idCommand.ExecuteScalar());
+                    }
+
+
+                    //Passo 3: Inserir o Aluno a partir do usuario criado
+                    string insertAlunoQuery = "INSERT INTO Aluno (IdUsuario) VALUES (@IdUsuario);";
+                    using (MySqlCommand alunoCommand = new MySqlCommand(insertAlunoQuery, connection))
+                    {
+                        alunoCommand.Parameters.AddWithValue("@IdUsuario", userId);
+
+                        int alunoRows = alunoCommand.ExecuteNonQuery();
+
+                        if (alunoRows > 0)
                         {
                             MessageBox.Show("Aluno cadastrado com sucesso!");
                             this.NavToLogin();
                         }
                         else
                         {
-                            MessageBox.Show("Nenhum registro foi inserido.");
+                            MessageBox.Show("Falha ao cadastrar aluno.");
                         }
                     }
                 }

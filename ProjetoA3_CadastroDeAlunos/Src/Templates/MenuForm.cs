@@ -27,7 +27,7 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
-
+            this.RenderMenu();
         }
 
         private void teste11ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +94,20 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
             this.Hide();
 
             frm.FormClosed += (s, args) => this.Close();
+        }
+
+        public void RenderMenu()
+        {
+            /*int id = UserSession.IdAluno;
+
+            if (id == 1)
+            {
+                teste1ToolStripMenuItem.Visible = false;
+            } 
+                else if (id == 2)
+            {
+                test2ToolStripMenuItem.Visible = false;
+            }*/
         }
 
     }
