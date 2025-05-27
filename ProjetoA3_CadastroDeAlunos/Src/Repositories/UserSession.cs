@@ -8,12 +8,13 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Repositories
 {
     public static class UserSession
     {
-        public static int IdAluno { get; set; }
+        public static int IdUsuario { get; set; }
         public static string Nome { get; set; }
         public static string Cpf { get; set; }
         public static string Email { get; set; }
         public static string Telefone { get; set; }
         public static string Endereco { get; set; }
+        public static string Tipo { get; set; }
         public static string GetFirstName() 
         {
             if (string.IsNullOrWhiteSpace(Nome))
@@ -45,7 +46,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Repositories
 
         public static void Logout() 
         {
-            IdAluno = 0;
+            IdUsuario = 0;
             Nome = string.Empty;
             Cpf = string.Empty;
             Cpf = string.Empty;
