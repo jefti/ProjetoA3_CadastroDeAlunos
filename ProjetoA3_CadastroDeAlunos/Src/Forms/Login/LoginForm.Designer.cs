@@ -97,7 +97,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(718, 336);
+            ClientSize = new Size(800, 450);
             Controls.Add(login_lnklbl_register);
             Controls.Add(Lgn_txt_senha);
             Controls.Add(label2);
@@ -105,9 +105,10 @@
             Controls.Add(Lgn_txt_email);
             Controls.Add(Login_btn_logar);
             Margin = new Padding(3, 2, 3, 2);
-            MaximumSize = new Size(734, 375);
-            MinimumSize = new Size(734, 375);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
             TopMost = true;
             Load += LoginForm_Load;

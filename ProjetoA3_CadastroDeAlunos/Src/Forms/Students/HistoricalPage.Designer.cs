@@ -35,7 +35,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "HistoricalPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HistoricalPage";
             Load += HistoricalPage_Load;
             ResumeLayout(false);

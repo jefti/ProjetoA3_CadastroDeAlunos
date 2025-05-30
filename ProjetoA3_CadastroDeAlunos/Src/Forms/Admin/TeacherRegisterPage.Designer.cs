@@ -28,19 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
+            label7 = new Label();
+            Reg_msktxt_senha_prof = new TextBox();
+            Reg_btn_salvar_prof = new Button();
+            Reg_txt_cargo_prof = new TextBox();
+            Reg_txt_endereco_prof = new TextBox();
+            Reg_txt_email_prof = new TextBox();
+            Reg_msktxt_telefone_prof = new MaskedTextBox();
+            Reg_msktxt_cpf_prof = new MaskedTextBox();
+            Reg_txt_nome_prof = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label6 = new Label();
+            label4 = new Label();
+            label1 = new Label();
+            label5 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Left;
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(Reg_msktxt_senha_prof);
+            panel1.Controls.Add(Reg_btn_salvar_prof);
+            panel1.Controls.Add(Reg_txt_cargo_prof);
+            panel1.Controls.Add(Reg_txt_endereco_prof);
+            panel1.Controls.Add(Reg_txt_email_prof);
+            panel1.Controls.Add(Reg_msktxt_telefone_prof);
+            panel1.Controls.Add(Reg_msktxt_cpf_prof);
+            panel1.Controls.Add(Reg_txt_nome_prof);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label5);
+            panel1.Location = new Point(99, 38);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(603, 389);
+            panel1.TabIndex = 7;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(37, 133);
+            label7.Name = "label7";
+            label7.Size = new Size(60, 21);
+            label7.TabIndex = 8;
+            label7.Text = "Senha: ";
+            // 
+            // Reg_msktxt_senha_prof
+            // 
+            Reg_msktxt_senha_prof.Location = new Point(116, 133);
+            Reg_msktxt_senha_prof.Name = "Reg_msktxt_senha_prof";
+            Reg_msktxt_senha_prof.Size = new Size(395, 23);
+            Reg_msktxt_senha_prof.TabIndex = 16;
+            // 
+            // Reg_btn_salvar_prof
+            // 
+            Reg_btn_salvar_prof.Location = new Point(490, 324);
+            Reg_btn_salvar_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_btn_salvar_prof.Name = "Reg_btn_salvar_prof";
+            Reg_btn_salvar_prof.Size = new Size(82, 22);
+            Reg_btn_salvar_prof.TabIndex = 14;
+            Reg_btn_salvar_prof.Text = "Salvar";
+            Reg_btn_salvar_prof.UseVisualStyleBackColor = true;
+            Reg_btn_salvar_prof.Click += Reg_btn_salvar_prof_Click_1;
+            // 
+            // Reg_txt_cargo_prof
+            // 
+            Reg_txt_cargo_prof.Location = new Point(117, 269);
+            Reg_txt_cargo_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_txt_cargo_prof.Name = "Reg_txt_cargo_prof";
+            Reg_txt_cargo_prof.Size = new Size(396, 23);
+            Reg_txt_cargo_prof.TabIndex = 13;
+            // 
+            // Reg_txt_endereco_prof
+            // 
+            Reg_txt_endereco_prof.Location = new Point(116, 242);
+            Reg_txt_endereco_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_txt_endereco_prof.Name = "Reg_txt_endereco_prof";
+            Reg_txt_endereco_prof.Size = new Size(396, 23);
+            Reg_txt_endereco_prof.TabIndex = 13;
+            // 
+            // Reg_txt_email_prof
+            // 
+            Reg_txt_email_prof.Location = new Point(116, 215);
+            Reg_txt_email_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_txt_email_prof.Name = "Reg_txt_email_prof";
+            Reg_txt_email_prof.Size = new Size(396, 23);
+            Reg_txt_email_prof.TabIndex = 12;
+            // 
+            // Reg_msktxt_telefone_prof
+            // 
+            Reg_msktxt_telefone_prof.Location = new Point(116, 188);
+            Reg_msktxt_telefone_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_msktxt_telefone_prof.Mask = "(00) 0 0000-0000";
+            Reg_msktxt_telefone_prof.Name = "Reg_msktxt_telefone_prof";
+            Reg_msktxt_telefone_prof.Size = new Size(395, 23);
+            Reg_msktxt_telefone_prof.TabIndex = 11;
+            // 
+            // Reg_msktxt_cpf_prof
+            // 
+            Reg_msktxt_cpf_prof.Location = new Point(116, 161);
+            Reg_msktxt_cpf_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_msktxt_cpf_prof.Mask = "000,000,000-00";
+            Reg_msktxt_cpf_prof.Name = "Reg_msktxt_cpf_prof";
+            Reg_msktxt_cpf_prof.Size = new Size(395, 23);
+            Reg_msktxt_cpf_prof.TabIndex = 10;
+            // 
+            // Reg_txt_nome_prof
+            // 
+            Reg_txt_nome_prof.Location = new Point(116, 104);
+            Reg_txt_nome_prof.Margin = new Padding(3, 2, 3, 2);
+            Reg_txt_nome_prof.Name = "Reg_txt_nome_prof";
+            Reg_txt_nome_prof.Size = new Size(394, 23);
+            Reg_txt_nome_prof.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(37, 104);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 21);
+            label3.TabIndex = 2;
+            label3.Text = "Nome: ";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(37, 271);
+            label2.Name = "label2";
+            label2.Size = new Size(55, 21);
+            label2.TabIndex = 5;
+            label2.Text = "Cargo:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(16, 242);
+            label6.Name = "label6";
+            label6.Size = new Size(81, 21);
+            label6.TabIndex = 5;
+            label6.Text = "Endereço: ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(53, 159);
+            label4.Name = "label4";
+            label4.Size = new Size(44, 21);
+            label4.TabIndex = 3;
+            label4.Text = "CPF: ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(42, 215);
+            label1.Name = "label1";
+            label1.Size = new Size(55, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Email: ";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(23, 188);
+            label5.Name = "label5";
+            label5.Size = new Size(74, 21);
+            label5.TabIndex = 4;
+            label5.Text = "Telefone: ";
             // 
             // TeacherRegisterPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "TeacherRegisterPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TeacherRegisterPage";
             Load += TeacherRegisterPage_Load;
+            Controls.SetChildIndex(panel1, 0);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Panel panel1;
+        private Button Reg_btn_salvar_prof;
+        private TextBox Reg_txt_endereco_prof;
+        private TextBox Reg_txt_email_prof;
+        private MaskedTextBox Reg_msktxt_telefone_prof;
+        private MaskedTextBox Reg_msktxt_cpf_prof;
+        private TextBox Reg_txt_nome_prof;
+        private Label label3;
+        private Label label6;
+        private Label label4;
+        private Label label1;
+        private Label label5;
+        private TextBox Reg_txt_cargo_prof;
+        private Label label2;
+        private TextBox Reg_msktxt_senha_prof;
+        private Label label7;
     }
 }

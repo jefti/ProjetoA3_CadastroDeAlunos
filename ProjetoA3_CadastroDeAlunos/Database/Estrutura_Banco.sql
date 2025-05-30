@@ -6,8 +6,8 @@ CREATE TABLE `Usuario` (
     `Email` VARCHAR(100) NOT NULL UNIQUE,
     `Senha` VARCHAR(100) NOT NULL,
 	`Nome` varchar(60),
-	`Cpf` varchar(11) UNIQUE,
-	`Telefone` varchar(11) unique,
+	`Cpf` varchar(14) UNIQUE,
+	`Telefone` varchar(16) unique,
     `Tipo` ENUM('aluno', 'funcionario') NOT NULL,
 	`Endereco` varchar(100)
 );

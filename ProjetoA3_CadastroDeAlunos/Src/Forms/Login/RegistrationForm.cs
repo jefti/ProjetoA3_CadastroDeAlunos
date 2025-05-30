@@ -1,15 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoA3_CadastroDeAlunos.Forms.LoginForm;
 using ProjetoA3_CadastroDeAlunos.Src.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
 {
@@ -136,5 +127,34 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
             frm.FormClosed += (s, args) => this.Close();
         }
 
+        private void Reg_txt_nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reg_msktxt_senha_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Reg_msktxt_cpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Reg_msktxt_telefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Reg_txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reg_txt_endereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,10 +35,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "CoursePage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CoursePage";
             Load += CoursePage_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

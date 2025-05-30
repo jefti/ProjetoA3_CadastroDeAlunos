@@ -35,10 +35,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "UpdateUserForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UpdateUserForm";
             Load += UpdateUserForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
