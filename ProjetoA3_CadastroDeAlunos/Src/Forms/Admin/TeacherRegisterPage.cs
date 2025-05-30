@@ -20,6 +20,9 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.TeacherRegisterPage
 
         private void Reg_btn_salvar_prof_Click_1(object sender, EventArgs e)
         {
+            Reg_msktxt_cpf_prof.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            Reg_msktxt_telefone_prof.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
             string nome = Reg_txt_nome_prof.Text.Trim();
             string cpf = Reg_msktxt_cpf_prof.Text.Trim();
             string phone = Reg_msktxt_telefone_prof.Text.Trim();
@@ -100,7 +103,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.TeacherRegisterPage
                             {
                                 transaction.Commit();
                                 MessageBox.Show("Professor cadastrado com sucesso!");
-
+                                this.ClearForm();
                             }
                             else
                             {
@@ -117,6 +120,16 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.TeacherRegisterPage
             }
         }
 
+        private void ClearForm() {
+            Reg_txt_nome_prof.Text = "";
+            Reg_msktxt_cpf_prof.Text = "";
+            Reg_msktxt_telefone_prof.Text = "";
+            Reg_txt_email_prof.Text = "";
+            Reg_txt_endereco_prof.Text = "";
+            Reg_txt_cargo_prof.Text = "";
+            Reg_msktxt_senha_prof.Text = "";
+
+        }
 
     }
 }

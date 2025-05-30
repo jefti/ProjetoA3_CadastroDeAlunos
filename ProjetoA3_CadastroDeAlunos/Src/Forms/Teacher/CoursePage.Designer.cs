@@ -39,21 +39,24 @@
             Curso_dtgrd_cursos.AllowUserToResizeColumns = false;
             Curso_dtgrd_cursos.AllowUserToResizeRows = false;
             Curso_dtgrd_cursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Curso_dtgrd_cursos.Location = new Point(12, 27);
+            Curso_dtgrd_cursos.Location = new Point(14, 36);
+            Curso_dtgrd_cursos.Margin = new Padding(3, 4, 3, 4);
             Curso_dtgrd_cursos.Name = "Curso_dtgrd_cursos";
             Curso_dtgrd_cursos.ReadOnly = true;
-            Curso_dtgrd_cursos.Size = new Size(443, 310);
+            Curso_dtgrd_cursos.RowHeadersWidth = 51;
+            Curso_dtgrd_cursos.Size = new Size(506, 413);
             Curso_dtgrd_cursos.TabIndex = 1;
             Curso_dtgrd_cursos.CellContentClick += dataGridView1_CellContentClick;
             // 
             // CoursePage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            MaximumSize = new Size(816, 489);
-            MinimumSize = new Size(816, 489);
+            ClientSize = new Size(912, 589);
             Controls.Add(Curso_dtgrd_cursos);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(930, 636);
+            MinimumSize = new Size(930, 636);
             Name = "CoursePage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CoursePage";

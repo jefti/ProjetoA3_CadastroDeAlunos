@@ -27,10 +27,10 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.CoursePage
 
                 string query = @"
             SELECT 
-                curso.Nome,
-                categoria.Nome AS categoria,
-                curso.MediaAprovacao,
-                curso.CargaHoraria
+                curso.Nome as 'Disciplina',
+                categoria.Nome AS 'Categoria',
+                curso.MediaAprovacao as 'Média',
+                curso.Duracao as 'Carga horária'
             FROM 
                 curso
             INNER JOIN 
