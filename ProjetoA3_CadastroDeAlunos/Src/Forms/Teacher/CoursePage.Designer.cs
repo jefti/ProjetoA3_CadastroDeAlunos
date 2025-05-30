@@ -28,7 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Curso_dtgrd_cursos = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)Curso_dtgrd_cursos).BeginInit();
             SuspendLayout();
+            // 
+            // Curso_dtgrd_cursos
+            // 
+            Curso_dtgrd_cursos.AllowUserToAddRows = false;
+            Curso_dtgrd_cursos.AllowUserToDeleteRows = false;
+            Curso_dtgrd_cursos.AllowUserToResizeColumns = false;
+            Curso_dtgrd_cursos.AllowUserToResizeRows = false;
+            Curso_dtgrd_cursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Curso_dtgrd_cursos.Location = new Point(12, 27);
+            Curso_dtgrd_cursos.Name = "Curso_dtgrd_cursos";
+            Curso_dtgrd_cursos.ReadOnly = true;
+            Curso_dtgrd_cursos.Size = new Size(443, 310);
+            Curso_dtgrd_cursos.TabIndex = 1;
+            Curso_dtgrd_cursos.CellContentClick += dataGridView1_CellContentClick;
             // 
             // CoursePage
             // 
@@ -37,14 +53,19 @@
             ClientSize = new Size(800, 450);
             MaximumSize = new Size(816, 489);
             MinimumSize = new Size(816, 489);
+            Controls.Add(Curso_dtgrd_cursos);
             Name = "CoursePage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CoursePage";
             Load += CoursePage_Load;
+            Controls.SetChildIndex(Curso_dtgrd_cursos, 0);
+            ((System.ComponentModel.ISupportInitialize)Curso_dtgrd_cursos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
+        private DataGridView Curso_dtgrd_cursos;
     }
 }

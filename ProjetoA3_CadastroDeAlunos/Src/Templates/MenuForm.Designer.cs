@@ -72,14 +72,14 @@
             // teste11ToolStripMenuItem
             // 
             teste11ToolStripMenuItem.Name = "teste11ToolStripMenuItem";
-            teste11ToolStripMenuItem.Size = new Size(180, 22);
+            teste11ToolStripMenuItem.Size = new Size(215, 26);
             teste11ToolStripMenuItem.Text = "Disciplinas e notas";
             teste11ToolStripMenuItem.Click += teste11ToolStripMenuItem_Click;
             // 
             // teste12ToolStripMenuItem
             // 
             teste12ToolStripMenuItem.Name = "teste12ToolStripMenuItem";
-            teste12ToolStripMenuItem.Size = new Size(180, 22);
+            teste12ToolStripMenuItem.Size = new Size(215, 26);
             teste12ToolStripMenuItem.Text = "Histórico escolar";
             teste12ToolStripMenuItem.Click += teste12ToolStripMenuItem_Click;
             // 
