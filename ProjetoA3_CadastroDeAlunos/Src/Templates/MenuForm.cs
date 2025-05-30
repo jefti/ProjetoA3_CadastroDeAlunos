@@ -1,9 +1,11 @@
 ﻿using ProjetoA3_CadastroDeAlunos.Forms.LoginForm;
+using ProjetoA3_CadastroDeAlunos.Src.Forms.AppointmentPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.CoursePage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.CourseRegisterPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.HistoricalPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage;
+using ProjetoA3_CadastroDeAlunos.Src.Forms.Students;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.TeacherRegisterPage;
 using ProjetoA3_CadastroDeAlunos.Src.Repositories;
 using System;
@@ -59,7 +61,7 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
         private void lançarNotaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GradesPage frm = new GradesPage();
+            AppointmentPage frm = new AppointmentPage();
             frm.Show();
             this.Hide();
 
@@ -108,6 +110,24 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
             {
                 test2ToolStripMenuItem.Visible = false;
             }*/
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LandingPage frm = new LandingPage();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
+        }
+
+        private void atualizarDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateUserForm frm = new UpdateUserForm();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
         }
 
     }

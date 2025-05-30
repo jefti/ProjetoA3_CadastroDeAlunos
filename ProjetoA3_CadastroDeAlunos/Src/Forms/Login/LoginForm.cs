@@ -68,22 +68,20 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
         }
 
 
-
-        private void login_lnklbl_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            RegistrationForm frm = new RegistrationForm();
-            frm.Show();
-            this.Hide();
-
-            frm.FormClosed += (s, args) => this.Close();
-        }
-
-
         private void NavToLandingPage()
         {
             LandingPage frm = new LandingPage();
             frm.Show();
             this.Hide();
+            frm.FormClosed += (s, args) => this.Close();
+        }
+
+        private void login_lnklbl_register_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistrationForm frm = new RegistrationForm();
+            frm.Show();
+            this.Hide();
+
             frm.FormClosed += (s, args) => this.Close();
         }
     }

@@ -110,9 +110,9 @@
             // 
             Land_txt_telefone.AutoSize = true;
             Land_txt_telefone.Font = new Font("Segoe UI", 12F);
-            Land_txt_telefone.Location = new Point(142, 108);
+            Land_txt_telefone.Location = new Point(124, 81);
             Land_txt_telefone.Name = "Land_txt_telefone";
-            Land_txt_telefone.Size = new Size(20, 28);
+            Land_txt_telefone.Size = new Size(16, 21);
             Land_txt_telefone.TabIndex = 16;
             Land_txt_telefone.Text = "-";
             // 
@@ -173,6 +173,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Name = "LandingPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LandingPage";
             Load += LandingPage_Load;
             Controls.SetChildIndex(panel1, 0);
