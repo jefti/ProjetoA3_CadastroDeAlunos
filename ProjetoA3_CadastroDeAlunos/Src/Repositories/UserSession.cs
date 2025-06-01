@@ -15,6 +15,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Repositories
         public static string Telefone { get; set; }
         public static string Endereco { get; set; }
         public static string Tipo { get; set; }
+        public static int IdTipo { get; set; }
         public static string GetFirstName() 
         {
             if (string.IsNullOrWhiteSpace(Nome))

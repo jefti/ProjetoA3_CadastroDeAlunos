@@ -8,7 +8,7 @@ CREATE TABLE `Usuario` (
 	`Nome` varchar(60),
 	`Cpf` varchar(11) UNIQUE,
 	`Telefone` varchar(11) unique,
-    `Tipo` ENUM('aluno', 'funcionario') NOT NULL,
+    `Tipo` ENUM('aluno', 'funcionario', 'administrador') NOT NULL,
 	`Endereco` varchar(100)
 );
 
@@ -17,6 +17,12 @@ CREATE TABLE `Funcionario` (
     `IdUsuario` INT NOT NULL UNIQUE,
 	`Cargo` varchar(60),
 	FOREIGN KEY (`IdUsuario`) REFERENCES `Usuario`(`IdUsuario`)
+);
+
+CREATE TABLE `Administrador` (
+    `IdAdministrador` int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT,
+    `IdUsuario` INT NOT NULL UNIQUE,
+    FOREIGN KEY (`IdUsuario`) REFERENCES `Usuario`(`IdUsuario`)
 );
 
 CREATE TABLE `Aluno` (

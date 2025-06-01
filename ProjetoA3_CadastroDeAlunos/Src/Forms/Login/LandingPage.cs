@@ -25,6 +25,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage
             Land_txt_telefone.Text = UserSession.GetMaskedTelefone();
             Land_txt_email.Text = UserSession.Email;
             Land_txt_endereco.Text = UserSession.Endereco;
+            Land_txt_Tipo.Text = UserSession.Tipo;
         }
 
     }

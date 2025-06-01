@@ -100,16 +100,21 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
         public void RenderMenu()
         {
-            /*int id = UserSession.IdAluno;
+            string tipo = UserSession.Tipo;
 
-            if (id == 1)
+            switch (tipo)
             {
-                teste1ToolStripMenuItem.Visible = false;
-            } 
-                else if (id == 2)
-            {
-                test2ToolStripMenuItem.Visible = false;
-            }*/
+                case "aluno":
+                    this.MenuControl(true, false, false);
+                    break;
+                case "funcionario":
+                    this.MenuControl(false, true, false);
+                    break;
+                case "administrador":
+                    this.MenuControl(false, false, true);
+                    break;
+            }
+
         }
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,6 +133,13 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
             this.Hide();
 
             frm.FormClosed += (s, args) => this.Close();
+        }
+
+        private void MenuControl(Boolean studentBool, Boolean teacherBool, Boolean adminBool) 
+        {
+            Menu_MenuItem_Aluno.Visible = studentBool;
+            Menu_MenuItem_Professor.Visible = teacherBool;
+            Menu_MenuItem_Administracao.Visible = adminBool;
         }
 
     }

@@ -28,9 +28,14 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
                 {
                     connection.Open();
 
-                    string query = @"SELECT IdUsuario, Nome, Cpf, Email, Telefone, Endereco, Tipo 
-                             FROM Usuario 
-                             WHERE Email = @Email AND Senha = @Senha";
+                    string query = @"
+                        SELECT u.IdUsuario, u.Nome, u.Cpf, u.Email, u.Telefone, u.Endereco, u.Tipo,
+                               a.IdAluno, f.IdFuncionario, ad.IdAdministrador
+                        FROM Usuario u
+                        LEFT JOIN Aluno a ON u.IdUsuario = a.IdUsuario
+                        LEFT JOIN Funcionario f ON u.IdUsuario = f.IdUsuario
+                        LEFT JOIN Administrador ad ON u.IdUsuario = ad.IdUsuario
+                        WHERE u.Email = @Email AND u.Senha = @Senha";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -47,11 +52,25 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
                                 UserSession.Email = reader.GetString("Email");
                                 UserSession.Telefone = reader.GetString("Telefone");
                                 UserSession.Endereco = reader.GetString("Endereco");
-                                UserSession.Tipo = reader.GetString("Tipo"); // aluno, funcionario, administrador
+                                UserSession.Tipo = reader.GetString("Tipo");
+
+                                // Salvar o Id específico com base no tipo
+                                switch (UserSession.Tipo)
+                                {
+                                    case "aluno":
+                                        UserSession.IdTipo = reader.IsDBNull(reader.GetOrdinal("IdAluno")) ? 0 : reader.GetInt32("IdAluno");
+                                        break;
+                                    case "funcionario":
+                                        UserSession.IdTipo = reader.IsDBNull(reader.GetOrdinal("IdFuncionario")) ? 0 : reader.GetInt32("IdFuncionario");
+                                        break;
+                                    case "administrador":
+                                        UserSession.IdTipo = reader.IsDBNull(reader.GetOrdinal("IdAdministrador")) ? 0 : reader.GetInt32("IdAdministrador");
+                                        break;
+                                }
 
                                 MessageBox.Show($"Bem-vindo, {UserSession.Nome}!");
 
-                                this.NavToLandingPage(); // ou direcionar com base no tipo, se preferir
+                                this.NavToLandingPage(); // ou redirecionar para telas diferentes se desejar
                             }
                             else
                             {

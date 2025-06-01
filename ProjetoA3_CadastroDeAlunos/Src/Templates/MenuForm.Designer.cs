@@ -30,123 +30,122 @@
         {
             menuStrip1 = new MenuStrip();
             inicioToolStripMenuItem = new ToolStripMenuItem();
-            teste1ToolStripMenuItem = new ToolStripMenuItem();
+            Menu_MenuItem_Aluno = new ToolStripMenuItem();
             teste11ToolStripMenuItem = new ToolStripMenuItem();
             teste12ToolStripMenuItem = new ToolStripMenuItem();
-            test2ToolStripMenuItem = new ToolStripMenuItem();
+            atualizarDadosToolStripMenuItem = new ToolStripMenuItem();
+            Menu_MenuItem_Professor = new ToolStripMenuItem();
             minhasDisciplinasToolStripMenuItem = new ToolStripMenuItem();
             lançarNotaToolStripMenuItem = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
+            Menu_MenuItem_Administracao = new ToolStripMenuItem();
             adicionarProfessorToolStripMenuItem = new ToolStripMenuItem();
             gerenciarCursosToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem1 = new ToolStripMenuItem();
-            atualizarDadosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, teste1ToolStripMenuItem, test2ToolStripMenuItem, sairToolStripMenuItem, sairToolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, Menu_MenuItem_Aluno, Menu_MenuItem_Professor, Menu_MenuItem_Administracao, sairToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(700, 24);
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(800, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            inicioToolStripMenuItem.Size = new Size(48, 20);
+            inicioToolStripMenuItem.Size = new Size(59, 24);
             inicioToolStripMenuItem.Text = "Inicio";
             inicioToolStripMenuItem.Click += inicioToolStripMenuItem_Click;
             // 
-            // teste1ToolStripMenuItem
+            // Menu_MenuItem_Aluno
             // 
-            teste1ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { teste11ToolStripMenuItem, teste12ToolStripMenuItem, atualizarDadosToolStripMenuItem });
-            teste1ToolStripMenuItem.Name = "teste1ToolStripMenuItem";
-            teste1ToolStripMenuItem.Size = new Size(51, 20);
-            teste1ToolStripMenuItem.Text = "Aluno";
+            Menu_MenuItem_Aluno.DropDownItems.AddRange(new ToolStripItem[] { teste11ToolStripMenuItem, teste12ToolStripMenuItem, atualizarDadosToolStripMenuItem });
+            Menu_MenuItem_Aluno.Name = "Menu_MenuItem_Aluno";
+            Menu_MenuItem_Aluno.Size = new Size(62, 24);
+            Menu_MenuItem_Aluno.Text = "Aluno";
             // 
             // teste11ToolStripMenuItem
             // 
             teste11ToolStripMenuItem.Name = "teste11ToolStripMenuItem";
-            teste11ToolStripMenuItem.Size = new Size(215, 26);
+            teste11ToolStripMenuItem.Size = new Size(224, 26);
             teste11ToolStripMenuItem.Text = "Disciplinas e notas";
             teste11ToolStripMenuItem.Click += teste11ToolStripMenuItem_Click;
             // 
             // teste12ToolStripMenuItem
             // 
             teste12ToolStripMenuItem.Name = "teste12ToolStripMenuItem";
-            teste12ToolStripMenuItem.Size = new Size(215, 26);
+            teste12ToolStripMenuItem.Size = new Size(224, 26);
             teste12ToolStripMenuItem.Text = "Histórico escolar";
             teste12ToolStripMenuItem.Click += teste12ToolStripMenuItem_Click;
             // 
-            // test2ToolStripMenuItem
+            // atualizarDadosToolStripMenuItem
             // 
-            test2ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { minhasDisciplinasToolStripMenuItem, lançarNotaToolStripMenuItem });
-            test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
-            test2ToolStripMenuItem.Size = new Size(68, 20);
-            test2ToolStripMenuItem.Text = "Professor";
+            atualizarDadosToolStripMenuItem.Name = "atualizarDadosToolStripMenuItem";
+            atualizarDadosToolStripMenuItem.Size = new Size(224, 26);
+            atualizarDadosToolStripMenuItem.Text = "Atualizar dados";
+            atualizarDadosToolStripMenuItem.Click += atualizarDadosToolStripMenuItem_Click;
+            // 
+            // Menu_MenuItem_Professor
+            // 
+            Menu_MenuItem_Professor.DropDownItems.AddRange(new ToolStripItem[] { minhasDisciplinasToolStripMenuItem, lançarNotaToolStripMenuItem });
+            Menu_MenuItem_Professor.Name = "Menu_MenuItem_Professor";
+            Menu_MenuItem_Professor.Size = new Size(84, 24);
+            Menu_MenuItem_Professor.Text = "Professor";
             // 
             // minhasDisciplinasToolStripMenuItem
             // 
             minhasDisciplinasToolStripMenuItem.Name = "minhasDisciplinasToolStripMenuItem";
-            minhasDisciplinasToolStripMenuItem.Size = new Size(180, 22);
+            minhasDisciplinasToolStripMenuItem.Size = new Size(224, 26);
             minhasDisciplinasToolStripMenuItem.Text = "Minhas disciplinas";
             minhasDisciplinasToolStripMenuItem.Click += minhasDisciplinasToolStripMenuItem_Click;
             // 
             // lançarNotaToolStripMenuItem
             // 
             lançarNotaToolStripMenuItem.Name = "lançarNotaToolStripMenuItem";
-            lançarNotaToolStripMenuItem.Size = new Size(180, 22);
+            lançarNotaToolStripMenuItem.Size = new Size(224, 26);
             lançarNotaToolStripMenuItem.Text = "Lançar nota";
             lançarNotaToolStripMenuItem.Click += lançarNotaToolStripMenuItem_Click;
             // 
-            // sairToolStripMenuItem
+            // Menu_MenuItem_Administracao
             // 
-            sairToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { adicionarProfessorToolStripMenuItem, gerenciarCursosToolStripMenuItem });
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(96, 20);
-            sairToolStripMenuItem.Text = "Administração";
+            Menu_MenuItem_Administracao.DropDownItems.AddRange(new ToolStripItem[] { adicionarProfessorToolStripMenuItem, gerenciarCursosToolStripMenuItem });
+            Menu_MenuItem_Administracao.Name = "Menu_MenuItem_Administracao";
+            Menu_MenuItem_Administracao.Size = new Size(119, 24);
+            Menu_MenuItem_Administracao.Text = "Administração";
             // 
             // adicionarProfessorToolStripMenuItem
             // 
             adicionarProfessorToolStripMenuItem.Name = "adicionarProfessorToolStripMenuItem";
-            adicionarProfessorToolStripMenuItem.Size = new Size(177, 22);
+            adicionarProfessorToolStripMenuItem.Size = new Size(224, 26);
             adicionarProfessorToolStripMenuItem.Text = "Adicionar professor";
             adicionarProfessorToolStripMenuItem.Click += adicionarProfessorToolStripMenuItem_Click;
             // 
             // gerenciarCursosToolStripMenuItem
             // 
             gerenciarCursosToolStripMenuItem.Name = "gerenciarCursosToolStripMenuItem";
-            gerenciarCursosToolStripMenuItem.Size = new Size(177, 22);
+            gerenciarCursosToolStripMenuItem.Size = new Size(224, 26);
             gerenciarCursosToolStripMenuItem.Text = "Gerenciar cursos";
             gerenciarCursosToolStripMenuItem.Click += gerenciarCursosToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem1
             // 
             sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            sairToolStripMenuItem1.Size = new Size(38, 20);
+            sairToolStripMenuItem1.Size = new Size(48, 24);
             sairToolStripMenuItem1.Text = "Sair";
             sairToolStripMenuItem1.Click += sairToolStripMenuItem1_Click;
             // 
-            // atualizarDadosToolStripMenuItem
-            // 
-            atualizarDadosToolStripMenuItem.Name = "atualizarDadosToolStripMenuItem";
-            atualizarDadosToolStripMenuItem.Size = new Size(180, 22);
-            atualizarDadosToolStripMenuItem.Text = "Atualizar dados";
-            atualizarDadosToolStripMenuItem.Click += atualizarDadosToolStripMenuItem_Click;
-            // 
             // MenuForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuForm";
             Text = "MenuForm";
             Load += MenuForm_Load;
@@ -159,11 +158,11 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem teste1ToolStripMenuItem;
+        private ToolStripMenuItem Menu_MenuItem_Aluno;
         private ToolStripMenuItem teste11ToolStripMenuItem;
         private ToolStripMenuItem teste12ToolStripMenuItem;
-        private ToolStripMenuItem test2ToolStripMenuItem;
-        private ToolStripMenuItem sairToolStripMenuItem;
+        private ToolStripMenuItem Menu_MenuItem_Professor;
+        private ToolStripMenuItem Menu_MenuItem_Administracao;
         private ToolStripMenuItem minhasDisciplinasToolStripMenuItem;
         private ToolStripMenuItem lançarNotaToolStripMenuItem;
         private ToolStripMenuItem adicionarProfessorToolStripMenuItem;
