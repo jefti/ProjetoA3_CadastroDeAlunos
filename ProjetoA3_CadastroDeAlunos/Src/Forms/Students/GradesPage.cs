@@ -22,16 +22,16 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage
 
         private void GradesPage_Load(object sender, EventArgs e)
         {
-            int idAluno = 1; // Troque pelo ID do aluno logado ou selecionado
+            int idAluno = UserSession.IdTipo;
             CarregarCursos(idAluno);
         }
 
         private void Graee_comb_disci_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Graee_comb_disci.SelectedValue != null)
+            if (Graee_comb_disci.SelectedIndex >= 0 && Graee_comb_disci.SelectedValue != null && Graee_comb_disci.SelectedValue is int)
             {
-                int idCurso = 1;
-                int idAluno = 1; // Coloque aqui o ID do aluno (fixo ou variável)
+                int idCurso = Convert.ToInt32(Graee_comb_disci.SelectedValue);
+                int idAluno = UserSession.IdTipo;
 
                 CarregarNotas(idAluno, idCurso);
             }

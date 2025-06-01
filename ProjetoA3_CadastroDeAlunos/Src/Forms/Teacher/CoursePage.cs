@@ -44,7 +44,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.CoursePage
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     // Parâmetro para o IdFuncionario (ajuste conforme necessário)
-                    command.Parameters.AddWithValue("@IdFuncionario", 1);
+                    command.Parameters.AddWithValue("@IdFuncionario", UserSession.IdTipo);
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                     {
