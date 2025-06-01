@@ -103,5 +103,15 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 
             frm.FormClosed += (s, args) => this.Close();
         }
+
+        private void Lgn_lbl_rec_senha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordREC frm = new PasswordREC();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
+
+        }
     }
 }

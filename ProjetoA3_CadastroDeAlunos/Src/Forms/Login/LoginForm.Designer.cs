@@ -34,6 +34,7 @@
             label2 = new Label();
             Lgn_txt_senha = new MaskedTextBox();
             login_lnklbl_register = new LinkLabel();
+            Lgn_lbl_rec_senha = new LinkLabel();
             SuspendLayout();
             // 
             // Login_btn_logar
@@ -85,7 +86,7 @@
             // login_lnklbl_register
             // 
             login_lnklbl_register.AutoSize = true;
-            login_lnklbl_register.Location = new Point(264, 227);
+            login_lnklbl_register.Location = new Point(264, 220);
             login_lnklbl_register.Name = "login_lnklbl_register";
             login_lnklbl_register.Size = new Size(98, 15);
             login_lnklbl_register.TabIndex = 6;
@@ -93,11 +94,23 @@
             login_lnklbl_register.Text = "Realizar cadastro!";
             login_lnklbl_register.LinkClicked += login_lnklbl_register_LinkClicked_1;
             // 
+            // Lgn_lbl_rec_senha
+            // 
+            Lgn_lbl_rec_senha.AutoSize = true;
+            Lgn_lbl_rec_senha.Location = new Point(264, 245);
+            Lgn_lbl_rec_senha.Name = "Lgn_lbl_rec_senha";
+            Lgn_lbl_rec_senha.Size = new Size(90, 15);
+            Lgn_lbl_rec_senha.TabIndex = 7;
+            Lgn_lbl_rec_senha.TabStop = true;
+            Lgn_lbl_rec_senha.Text = "Esqueci a senha";
+            Lgn_lbl_rec_senha.LinkClicked += Lgn_lbl_rec_senha_LinkClicked;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Lgn_lbl_rec_senha);
             Controls.Add(login_lnklbl_register);
             Controls.Add(Lgn_txt_senha);
             Controls.Add(label2);
@@ -124,5 +137,6 @@
         private Label label2;
         private MaskedTextBox Lgn_txt_senha;
         private LinkLabel login_lnklbl_register;
+        private LinkLabel Lgn_lbl_rec_senha;
     }
 }
