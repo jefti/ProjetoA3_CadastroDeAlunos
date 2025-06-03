@@ -32,11 +32,12 @@
             // 
             // CourseRegisterPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            MaximumSize = new Size(816, 489);
-            MinimumSize = new Size(816, 489);
+            ClientSize = new Size(912, 589);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(930, 636);
+            MinimumSize = new Size(930, 636);
             Name = "CourseRegisterPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CourseRegisterPage";

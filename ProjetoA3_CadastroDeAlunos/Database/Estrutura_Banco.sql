@@ -43,6 +43,8 @@ CREATE TABLE `Curso` (
     `Nome` varchar(45) NOT NULL,
     `MediaAprovacao` double NOT NULL,
     `Duracao` int NOT NULL,
+    `NumeroProvas` int NOT NULL,
+    `Recuperacao` Boolean NOT NULL DEFAULT TRUE,
     `Status` Boolean NOT NULL DEFAULT TRUE,
     FOREIGN KEY (`IdCategoria`) REFERENCES `Categoria`(`IdCategoria`),
     FOREIGN KEY (`IdFuncionario`) REFERENCES `Funcionario`(`IdFuncionario`)
@@ -62,7 +64,8 @@ CREATE TABLE `Nota` (
 	`IdNota` int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT,	
     `IdAluno_Curso` int NOT NULL,
     `Valor` Float,
-    `Ordem` int, -- 1, 2, 3 ou 4
+    `Ordem` int,
+    `Recuperacao` Boolean,
     `DataLancamento` DateTime DEFAULT NOW(),
     FOREIGN KEY (`IdAluno_Curso`) REFERENCES `Aluno_Curso`(`IdAluno_Curso`)
 );

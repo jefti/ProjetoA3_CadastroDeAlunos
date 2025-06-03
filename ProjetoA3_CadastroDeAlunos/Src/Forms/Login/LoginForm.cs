@@ -103,5 +103,10 @@ namespace ProjetoA3_CadastroDeAlunos.Forms.LoginForm
 
             frm.FormClosed += (s, args) => this.Close();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
