@@ -34,16 +34,16 @@
             label2 = new Label();
             label1 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            textBox2 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
+            RegC_Txt_Nome = new TextBox();
+            RegC_Combo_Categoria = new ComboBox();
+            RegC_Radio_Yes = new RadioButton();
+            RegC_Radio_No = new RadioButton();
+            RegC_Txt_Duracao = new TextBox();
+            RegC_Txt_NumProvas = new TextBox();
+            RegC_Btn_Create = new Button();
             label7 = new Label();
             panel1 = new Panel();
-            textBox3 = new TextBox();
+            RegC_Txt_Media = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,17 +61,17 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(25, 182);
+            label4.Location = new Point(23, 231);
             label4.Name = "label4";
-            label4.Size = new Size(71, 20);
+            label4.Size = new Size(135, 20);
             label4.TabIndex = 9;
-            label4.Text = "Duração:";
+            label4.Text = "Duração do curso:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(365, 129);
+            label3.Location = new Point(25, 183);
             label3.Name = "label3";
             label3.Size = new Size(167, 20);
             label3.TabIndex = 8;
@@ -83,9 +83,9 @@
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.Location = new Point(25, 79);
             label2.Name = "label2";
-            label2.Size = new Size(80, 20);
+            label2.Size = new Size(144, 20);
             label2.TabIndex = 7;
-            label2.Text = "Categoria:";
+            label2.Text = "Categoria do curso:";
             // 
             // label1
             // 
@@ -101,77 +101,80 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(25, 245);
+            label6.Location = new Point(23, 286);
             label6.Name = "label6";
-            label6.Size = new Size(102, 20);
+            label6.Size = new Size(163, 20);
             label6.TabIndex = 11;
-            label6.Text = "Recuperação:";
+            label6.Text = "Prova de recuperação:";
             // 
-            // textBox1
+            // RegC_Txt_Nome
             // 
-            textBox1.Location = new Point(183, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(311, 27);
-            textBox1.TabIndex = 12;
+            RegC_Txt_Nome.Location = new Point(211, 30);
+            RegC_Txt_Nome.Name = "RegC_Txt_Nome";
+            RegC_Txt_Nome.Size = new Size(311, 27);
+            RegC_Txt_Nome.TabIndex = 12;
             // 
-            // comboBox1
+            // RegC_Combo_Categoria
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(183, 72);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(311, 28);
-            comboBox1.TabIndex = 13;
+            RegC_Combo_Categoria.FormattingEnabled = true;
+            RegC_Combo_Categoria.Location = new Point(211, 76);
+            RegC_Combo_Categoria.Name = "RegC_Combo_Categoria";
+            RegC_Combo_Categoria.Size = new Size(311, 28);
+            RegC_Combo_Categoria.TabIndex = 13;
             // 
-            // radioButton1
+            // RegC_Radio_Yes
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Checked = true;
-            radioButton1.Location = new Point(142, 243);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(156, 24);
-            radioButton1.TabIndex = 14;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Possui recuperação";
-            radioButton1.UseVisualStyleBackColor = true;
+            RegC_Radio_Yes.AutoSize = true;
+            RegC_Radio_Yes.Checked = true;
+            RegC_Radio_Yes.Location = new Point(211, 282);
+            RegC_Radio_Yes.Name = "RegC_Radio_Yes";
+            RegC_Radio_Yes.Size = new Size(156, 24);
+            RegC_Radio_Yes.TabIndex = 14;
+            RegC_Radio_Yes.TabStop = true;
+            RegC_Radio_Yes.Text = "Possui recuperação";
+            RegC_Radio_Yes.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RegC_Radio_No
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(142, 273);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(190, 24);
-            radioButton2.TabIndex = 15;
-            radioButton2.Text = "Não possui recuperação";
-            radioButton2.UseVisualStyleBackColor = true;
+            RegC_Radio_No.AutoSize = true;
+            RegC_Radio_No.Location = new Point(211, 312);
+            RegC_Radio_No.Name = "RegC_Radio_No";
+            RegC_Radio_No.Size = new Size(190, 24);
+            RegC_Radio_No.TabIndex = 15;
+            RegC_Radio_No.Text = "Não possui recuperação";
+            RegC_Radio_No.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // RegC_Txt_Duracao
             // 
-            textBox2.Location = new Point(183, 175);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(311, 27);
-            textBox2.TabIndex = 16;
+            RegC_Txt_Duracao.Location = new Point(211, 224);
+            RegC_Txt_Duracao.Name = "RegC_Txt_Duracao";
+            RegC_Txt_Duracao.Size = new Size(311, 27);
+            RegC_Txt_Duracao.TabIndex = 16;
+            RegC_Txt_Duracao.KeyPress += RegC_Txt_Duracao_KeyPress;
             // 
-            // textBox4
+            // RegC_Txt_NumProvas
             // 
-            textBox4.Location = new Point(183, 126);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(176, 27);
-            textBox4.TabIndex = 18;
+            RegC_Txt_NumProvas.Location = new Point(211, 126);
+            RegC_Txt_NumProvas.Name = "RegC_Txt_NumProvas";
+            RegC_Txt_NumProvas.Size = new Size(311, 27);
+            RegC_Txt_NumProvas.TabIndex = 18;
+            RegC_Txt_NumProvas.KeyPress += RegC_Txt_NumProvas_KeyPress;
             // 
-            // button1
+            // RegC_Btn_Create
             // 
-            button1.Location = new Point(636, 289);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 19;
-            button1.Text = "Criar";
-            button1.UseVisualStyleBackColor = true;
+            RegC_Btn_Create.Location = new Point(632, 312);
+            RegC_Btn_Create.Name = "RegC_Btn_Create";
+            RegC_Btn_Create.Size = new Size(94, 29);
+            RegC_Btn_Create.TabIndex = 19;
+            RegC_Btn_Create.Text = "Criar";
+            RegC_Btn_Create.UseVisualStyleBackColor = true;
+            RegC_Btn_Create.Click += RegC_Btn_Create_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(322, 61);
+            label7.Location = new Point(322, 45);
             label7.Name = "label7";
             label7.Size = new Size(182, 31);
             label7.TabIndex = 20;
@@ -180,32 +183,33 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(RegC_Txt_Media);
+            panel1.Controls.Add(RegC_Btn_Create);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(RegC_Combo_Categoria);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(RegC_Txt_Nome);
+            panel1.Controls.Add(RegC_Txt_NumProvas);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(radioButton1);
-            panel1.Controls.Add(radioButton2);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(RegC_Radio_Yes);
+            panel1.Controls.Add(RegC_Radio_No);
+            panel1.Controls.Add(RegC_Txt_Duracao);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label5);
-            panel1.Location = new Point(39, 79);
+            panel1.Location = new Point(32, 65);
             panel1.Name = "panel1";
-            panel1.Size = new Size(742, 323);
+            panel1.Size = new Size(742, 359);
             panel1.TabIndex = 21;
             panel1.Paint += panel1_Paint;
             // 
-            // textBox3
+            // RegC_Txt_Media
             // 
-            textBox3.Location = new Point(538, 126);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(176, 27);
-            textBox3.TabIndex = 20;
+            RegC_Txt_Media.Location = new Point(211, 176);
+            RegC_Txt_Media.Name = "RegC_Txt_Media";
+            RegC_Txt_Media.Size = new Size(311, 27);
+            RegC_Txt_Media.TabIndex = 20;
+            RegC_Txt_Media.KeyPress += RegC_Txt_Media_KeyPress;
             // 
             // CourseCreatePage
             // 
@@ -233,15 +237,15 @@
         private Label label2;
         private Label label1;
         private Label label6;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private TextBox textBox2;
-        private TextBox textBox4;
-        private Button button1;
+        private TextBox RegC_Txt_Nome;
+        private ComboBox RegC_Combo_Categoria;
+        private RadioButton RegC_Radio_Yes;
+        private RadioButton RegC_Radio_No;
+        private TextBox RegC_Txt_Duracao;
+        private TextBox RegC_Txt_NumProvas;
+        private Button RegC_Btn_Create;
         private Label label7;
         private Panel panel1;
-        private TextBox textBox3;
+        private TextBox RegC_Txt_Media;
     }
 }

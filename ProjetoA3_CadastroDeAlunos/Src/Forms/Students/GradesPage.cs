@@ -43,7 +43,8 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage
                      FROM Aluno
                      INNER JOIN Aluno_Curso ON Aluno.IdAluno = Aluno_Curso.IdAluno
                      INNER JOIN Curso ON Aluno_Curso.IdCurso = Curso.IdCurso
-                     WHERE Aluno.IdAluno = @IdAluno";
+                     WHERE Aluno.IdAluno = @IdAluno
+                     AND Curso.Status = 1;";
 
             using (MySqlConnection connection = Connection.GetConnection())
             {
@@ -78,12 +79,20 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage
         }
         private void CarregarNotas(int idAluno, int idCurso)
         {
-        
+            lbl_situacao.Text = "-";
+            lbl_DataFim.Text = "-";
+            lbl_media.Text = "-";
+
             string query = @"SELECT 
-                        Nota.IdNota,
+                        CASE 
+                            WHEN Recuperacao = 1 THEN 'Prova de Recuperação'
+                            ELSE CONCAT('Prova ', Ordem)
+                        END AS ""Avaliação"",
                         Nota.Valor,
-                        Nota.Ordem,
-                        Nota.DataLancamento
+                        Nota.DataLancamento as ""Data de Correção"",
+                        Aluno_Curso.Resultado,
+                        Aluno_Curso.MediaFinal,
+                        Aluno_Curso.DataFim as ""Ultima Atualização""
                      FROM 
                         Aluno
                      INNER JOIN 
@@ -92,7 +101,8 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage
                         Nota ON Aluno_Curso.IdAluno_Curso = Nota.IdAluno_Curso
                      WHERE 
                         Aluno.IdAluno = @IdAluno
-                        AND Aluno_Curso.IdCurso = @IdCurso";
+                        AND Aluno_Curso.IdCurso = @IdCurso
+                        AND Nota.Corrigida = 1";
 
             using (MySqlConnection connection = Connection.GetConnection())
             {
@@ -109,6 +119,31 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage
                             DataTable dt = new DataTable();
                             adapter.Fill(dt);
                             dataGridNotas.DataSource = dt;
+
+                            dataGridNotas.Columns["Resultado"].Visible = false;
+                            dataGridNotas.Columns["MediaFinal"].Visible = false;
+                            dataGridNotas.Columns["Ultima Atualização"].Visible = false;
+
+                            
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                DataRow row = dt.Rows[0];
+
+                                lbl_situacao.Text = row["Resultado"] == DBNull.Value 
+                                    ? "-" 
+                                    : row["Resultado"].ToString();
+                                
+                                if (row["MediaFinal"] != DBNull.Value)
+                                {
+                                    double mediaFinal = Convert.ToDouble(row["MediaFinal"]);
+                                    lbl_media.Text = mediaFinal.ToString("F2"); // ex: 7.50
+                                }
+
+                                lbl_DataFim.Text = row["Ultima Atualização"] == DBNull.Value
+                                    ? "-"
+                                    : Convert.ToDateTime(row["Ultima Atualização"]).ToString("dd/MM/yyyy");
+                            }
                         }
                     }
                 }

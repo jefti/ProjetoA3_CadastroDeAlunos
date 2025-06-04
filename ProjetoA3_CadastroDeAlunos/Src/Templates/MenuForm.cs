@@ -2,7 +2,6 @@
 using ProjetoA3_CadastroDeAlunos.Src.Forms.Admin;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.AppointmentPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.CoursePage;
-using ProjetoA3_CadastroDeAlunos.Src.Forms.CourseRegisterPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.HistoricalPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage;
@@ -144,18 +143,18 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
             Menu_MenuItem_Administracao.Visible = adminBool;
         }
 
-        private void adicionarCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void criarCursoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CourseRegisterPage frm = new CourseRegisterPage();
+            CourseCreatePage frm = new CourseCreatePage();
             frm.Show();
             this.Hide();
 
             frm.FormClosed += (s, args) => this.Close();
         }
 
-        private void criarCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void entrarEmUmCursoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CourseCreatePage frm = new CourseCreatePage();
+            EnterCoursePage frm = new EnterCoursePage();
             frm.Show();
             this.Hide();
 

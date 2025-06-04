@@ -8,7 +8,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Repositories
 {
     public class AlunoItem
     {
-        public int IdAluno { get; set; }
+       public int IdAluno { get; set; }
         public string Nome { get; set; }
 
         public override string ToString()

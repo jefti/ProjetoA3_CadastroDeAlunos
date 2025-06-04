@@ -36,17 +36,18 @@
             login_lnklbl_register = new LinkLabel();
             label3 = new Label();
             panel1 = new Panel();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // Login_btn_logar
             // 
-            Login_btn_logar.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Login_btn_logar.Location = new Point(309, 261);
+            Login_btn_logar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Login_btn_logar.Location = new Point(284, 241);
             Login_btn_logar.Name = "Login_btn_logar";
-            Login_btn_logar.Size = new Size(150, 40);
+            Login_btn_logar.Size = new Size(184, 40);
             Login_btn_logar.TabIndex = 0;
-            Login_btn_logar.Text = "Entrar";
+            Login_btn_logar.Text = "Acessar aplicação";
             Login_btn_logar.UseVisualStyleBackColor = true;
             Login_btn_logar.Click += Login_btn_logar_Click;
             // 
@@ -92,7 +93,7 @@
             // login_lnklbl_register
             // 
             login_lnklbl_register.AutoSize = true;
-            login_lnklbl_register.Location = new Point(244, 304);
+            login_lnklbl_register.Location = new Point(231, 296);
             login_lnklbl_register.Name = "login_lnklbl_register";
             login_lnklbl_register.Size = new Size(284, 20);
             login_lnklbl_register.TabIndex = 6;
@@ -109,7 +110,6 @@
             label3.Size = new Size(295, 54);
             label3.TabIndex = 7;
             label3.Text = "Tela de Acesso";
-            label3.Click += label3_Click;
             // 
             // panel1
             // 
@@ -122,14 +122,26 @@
             panel1.Controls.Add(Lgn_txt_email);
             panel1.Location = new Point(112, 104);
             panel1.Name = "panel1";
-            panel1.Size = new Size(713, 352);
+            panel1.Size = new Size(713, 394);
             panel1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(641, 58);
+            button1.Name = "button1";
+            button1.Size = new Size(184, 40);
+            button1.TabIndex = 7;
+            button1.Text = "Esqueci a senha";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 589);
+            Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(panel1);
             MaximumSize = new Size(930, 636);
@@ -155,5 +167,6 @@
         private LinkLabel login_lnklbl_register;
         private Label label3;
         private Panel panel1;
+        private Button button1;
     }
 }
