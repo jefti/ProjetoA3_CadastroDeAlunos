@@ -21,6 +21,7 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.HistoricalPage
 
         private void HistoricalPage_Load(object sender, EventArgs e)
         {
+
             string query = @"
             SELECT 
                 Curso.Nome as ""Curso"",

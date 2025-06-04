@@ -97,7 +97,7 @@
             panel1.Controls.Add(label2);
             panel1.Location = new Point(35, 452);
             panel1.Name = "panel1";
-            panel1.Size = new Size(172, 125);
+            panel1.Size = new Size(206, 125);
             panel1.TabIndex = 6;
             // 
             // lbl_situacao
@@ -114,9 +114,9 @@
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(lbl_media);
             panel2.Controls.Add(label4);
-            panel2.Location = new Point(227, 452);
+            panel2.Location = new Point(339, 452);
             panel2.Name = "panel2";
-            panel2.Size = new Size(172, 125);
+            panel2.Size = new Size(206, 125);
             panel2.TabIndex = 7;
             // 
             // lbl_media
@@ -143,9 +143,9 @@
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(lbl_DataFim);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(420, 452);
+            panel3.Location = new Point(628, 452);
             panel3.Name = "panel3";
-            panel3.Size = new Size(172, 125);
+            panel3.Size = new Size(206, 125);
             panel3.TabIndex = 8;
             // 
             // lbl_DataFim
