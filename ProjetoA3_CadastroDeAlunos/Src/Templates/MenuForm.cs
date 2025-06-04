@@ -1,11 +1,12 @@
 ﻿using ProjetoA3_CadastroDeAlunos.Forms.LoginForm;
+using ProjetoA3_CadastroDeAlunos.Src.Forms.Admin;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.AppointmentPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.CoursePage;
-using ProjetoA3_CadastroDeAlunos.Src.Forms.CourseRegisterPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.HistoricalPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.LandingPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.Students;
+using ProjetoA3_CadastroDeAlunos.Src.Forms.Teacher;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.TeacherRegisterPage;
 using ProjetoA3_CadastroDeAlunos.Src.Repositories;
 using System;
@@ -79,7 +80,7 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
         private void gerenciarCursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CourseRegisterPage frm = new CourseRegisterPage();
+            EnrolStudentPage frm = new EnrolStudentPage();
             frm.Show();
             this.Hide();
 
@@ -135,12 +136,29 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
             frm.FormClosed += (s, args) => this.Close();
         }
 
-        private void MenuControl(Boolean studentBool, Boolean teacherBool, Boolean adminBool) 
+        private void MenuControl(Boolean studentBool, Boolean teacherBool, Boolean adminBool)
         {
             Menu_MenuItem_Aluno.Visible = studentBool;
             Menu_MenuItem_Professor.Visible = teacherBool;
             Menu_MenuItem_Administracao.Visible = adminBool;
         }
 
+        private void criarCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CourseCreatePage frm = new CourseCreatePage();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
+        }
+
+        private void entrarEmUmCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EnterCoursePage frm = new EnterCoursePage();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
+        }
     }
 }

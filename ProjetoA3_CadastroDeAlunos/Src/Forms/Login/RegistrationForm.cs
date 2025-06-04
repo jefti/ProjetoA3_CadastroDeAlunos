@@ -156,5 +156,10 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

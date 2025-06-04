@@ -33,7 +33,6 @@
             dBContextBindingSource = new BindingSource(components);
             dBContextBindingSource1 = new BindingSource(components);
             panel1 = new Panel();
-            Land_txt_Tipo = new Label();
             Land_txt_nome = new Label();
             Land_txt_endereco = new Label();
             Land_txt_cpf = new Label();
@@ -52,7 +51,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(Land_txt_Tipo);
             panel1.Controls.Add(Land_txt_nome);
             panel1.Controls.Add(Land_txt_endereco);
             panel1.Controls.Add(Land_txt_cpf);
@@ -67,16 +65,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(544, 266);
             panel1.TabIndex = 1;
-            // 
-            // Land_txt_Tipo
-            // 
-            Land_txt_Tipo.AutoSize = true;
-            Land_txt_Tipo.Font = new Font("Segoe UI", 12F);
-            Land_txt_Tipo.Location = new Point(142, 181);
-            Land_txt_Tipo.Name = "Land_txt_Tipo";
-            Land_txt_Tipo.Size = new Size(20, 28);
-            Land_txt_Tipo.TabIndex = 18;
-            Land_txt_Tipo.Text = "-";
             // 
             // Land_txt_nome
             // 
@@ -213,6 +201,5 @@
         private Label Land_lbl_cpf;
         private Label Land_lbl_email;
         private Label Land_lbl_telefone;
-        private Label Land_txt_Tipo;
     }
 }
