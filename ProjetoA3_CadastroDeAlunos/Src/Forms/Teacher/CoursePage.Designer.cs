@@ -79,12 +79,15 @@
             Controls.Add(Course_Btn_Encerrar);
             Controls.Add(label1);
             Controls.Add(Curso_dtgrd_cursos);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             MaximumSize = new Size(930, 636);
             MinimumSize = new Size(930, 636);
             Name = "CoursePage";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CoursePage";
+            Text = "Seus Cursos";
             Load += CoursePage_Load;
             Controls.SetChildIndex(Curso_dtgrd_cursos, 0);
             Controls.SetChildIndex(label1, 0);

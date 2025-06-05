@@ -51,19 +51,19 @@
             // Enter_lst_cursos
             // 
             Enter_lst_cursos.FormattingEnabled = true;
-            Enter_lst_cursos.Location = new Point(28, 68);
+            Enter_lst_cursos.Location = new Point(28, 102);
             Enter_lst_cursos.Name = "Enter_lst_cursos";
-            Enter_lst_cursos.Size = new Size(172, 364);
+            Enter_lst_cursos.Size = new Size(206, 444);
             Enter_lst_cursos.TabIndex = 1;
             Enter_lst_cursos.SelectedIndexChanged += Enter_lst_cursos_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(28, 37);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(28, 41);
             label1.Name = "label1";
-            label1.Size = new Size(79, 28);
+            label1.Size = new Size(119, 41);
             label1.TabIndex = 2;
             label1.Text = "Cursos:";
             // 
@@ -71,7 +71,7 @@
             // 
             Enter_lbl_CourseName.AutoSize = true;
             Enter_lbl_CourseName.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Enter_lbl_CourseName.Location = new Point(246, 37);
+            Enter_lbl_CourseName.Location = new Point(299, 71);
             Enter_lbl_CourseName.Name = "Enter_lbl_CourseName";
             Enter_lbl_CourseName.Size = new Size(0, 41);
             Enter_lbl_CourseName.TabIndex = 3;
@@ -92,14 +92,14 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(225, 68);
+            panel1.Location = new Point(278, 102);
             panel1.Name = "panel1";
-            panel1.Size = new Size(547, 364);
+            panel1.Size = new Size(547, 444);
             panel1.TabIndex = 4;
             // 
             // button1
             // 
-            button1.Location = new Point(435, 325);
+            button1.Location = new Point(422, 391);
             button1.Name = "button1";
             button1.Size = new Size(107, 34);
             button1.TabIndex = 12;
@@ -225,13 +225,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(912, 589);
             Controls.Add(Enter_lbl_CourseName);
             Controls.Add(label1);
             Controls.Add(Enter_lst_cursos);
             Controls.Add(panel1);
+            MaximizeBox = false;
+            MaximumSize = new Size(930, 636);
+            MinimumSize = new Size(930, 636);
             Name = "EnterCoursePage";
-            Text = "EnterCoursePage";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Entrar em um curso";
             Load += EnterCoursePage_Load;
             Controls.SetChildIndex(panel1, 0);
             Controls.SetChildIndex(Enter_lst_cursos, 0);

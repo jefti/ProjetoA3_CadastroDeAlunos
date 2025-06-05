@@ -225,10 +225,12 @@
             ClientSize = new Size(912, 589);
             Controls.Add(label7);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MaximumSize = new Size(930, 636);
             MinimumSize = new Size(930, 636);
             Name = "RegistrationForm";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de aluno";
             Load += RegistrationForm_Load;

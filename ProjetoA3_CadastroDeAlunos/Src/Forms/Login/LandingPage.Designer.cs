@@ -43,6 +43,7 @@
             Land_lbl_cpf = new Label();
             Land_lbl_email = new Label();
             Land_lbl_telefone = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)alunoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dBContextBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dBContextBindingSource1).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(Land_txt_nome);
             panel1.Controls.Add(Land_txt_endereco);
             panel1.Controls.Add(Land_txt_cpf);
@@ -61,9 +63,9 @@
             panel1.Controls.Add(Land_lbl_cpf);
             panel1.Controls.Add(Land_lbl_email);
             panel1.Controls.Add(Land_lbl_telefone);
-            panel1.Location = new Point(33, 93);
+            panel1.Location = new Point(51, 192);
             panel1.Name = "panel1";
-            panel1.Size = new Size(544, 266);
+            panel1.Size = new Size(544, 214);
             panel1.TabIndex = 1;
             // 
             // Land_txt_nome
@@ -166,17 +168,34 @@
             Land_lbl_telefone.TabIndex = 10;
             Land_lbl_telefone.Text = "Telefone: ";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(301, 61);
+            label1.Name = "label1";
+            label1.Size = new Size(254, 54);
+            label1.TabIndex = 2;
+            label1.Text = "Bem-vindo !";
+            // 
             // LandingPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(912, 589);
+            Controls.Add(label1);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MaximumSize = new Size(930, 636);
+            MinimumSize = new Size(930, 636);
             Name = "LandingPage";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LandingPage";
             Load += LandingPage_Load;
             Controls.SetChildIndex(panel1, 0);
+            Controls.SetChildIndex(label1, 0);
             ((System.ComponentModel.ISupportInitialize)alunoBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dBContextBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dBContextBindingSource1).EndInit();
@@ -201,5 +220,6 @@
         private Label Land_lbl_cpf;
         private Label Land_lbl_email;
         private Label Land_lbl_telefone;
+        private Label label1;
     }
 }
