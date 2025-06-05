@@ -150,5 +150,14 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
 
             frm.FormClosed += (s, args) => this.Close();
         }
+
+        private void relatorioAcademicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelatorioAcademico frm = new RelatorioAcademico();
+            frm.Show();
+            this.Hide();
+
+            frm.FormClosed += (s, args) => this.Close();
+        }
     }
 }
