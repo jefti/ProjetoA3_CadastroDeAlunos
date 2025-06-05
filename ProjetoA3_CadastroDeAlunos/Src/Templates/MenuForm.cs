@@ -1,5 +1,4 @@
 ﻿using ProjetoA3_CadastroDeAlunos.Forms.LoginForm;
-using ProjetoA3_CadastroDeAlunos.Src.Forms.Admin;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.AppointmentPage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.CoursePage;
 using ProjetoA3_CadastroDeAlunos.Src.Forms.GradesPage;
@@ -72,15 +71,6 @@ namespace ProjetoA3_CadastroDeAlunos.Templates.MenuForm
         private void adicionarProfessorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TeacherRegisterPage frm = new TeacherRegisterPage();
-            frm.Show();
-            this.Hide();
-
-            frm.FormClosed += (s, args) => this.Close();
-        }
-
-        private void gerenciarCursosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EnrolStudentPage frm = new EnrolStudentPage();
             frm.Show();
             this.Hide();
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label8 = new Label();
             Reg_btn__updt = new Button();
             Reg_txt_email_updt = new TextBox();
             Reg_msktxt_telefone_updt = new MaskedTextBox();
@@ -36,7 +37,6 @@
             label3 = new Label();
             label1 = new Label();
             label5 = new Label();
-            label8 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,14 +52,24 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label5);
-            panel1.Location = new Point(113, 41);
+            panel1.Location = new Point(35, 41);
             panel1.Name = "panel1";
-            panel1.Size = new Size(689, 450);
+            panel1.Size = new Size(838, 494);
             panel1.TabIndex = 8;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(154, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(408, 54);
+            label8.TabIndex = 14;
+            label8.Text = "Alterar informações:";
             // 
             // Reg_btn__updt
             // 
-            Reg_btn__updt.Location = new Point(580, 401);
+            Reg_btn__updt.Location = new Point(579, 437);
             Reg_btn__updt.Margin = new Padding(3, 4, 3, 4);
             Reg_btn__updt.Name = "Reg_btn__updt";
             Reg_btn__updt.Size = new Size(91, 31);
@@ -70,32 +80,35 @@
             // 
             // Reg_txt_email_updt
             // 
-            Reg_txt_email_updt.Location = new Point(141, 269);
+            Reg_txt_email_updt.Font = new Font("Segoe UI", 12F);
+            Reg_txt_email_updt.Location = new Point(158, 331);
             Reg_txt_email_updt.Margin = new Padding(3, 4, 3, 4);
             Reg_txt_email_updt.Name = "Reg_txt_email_updt";
-            Reg_txt_email_updt.Size = new Size(450, 27);
+            Reg_txt_email_updt.Size = new Size(450, 34);
             Reg_txt_email_updt.TabIndex = 12;
             // 
             // Reg_msktxt_telefone_updt
             // 
-            Reg_msktxt_telefone_updt.Location = new Point(139, 232);
+            Reg_msktxt_telefone_updt.Font = new Font("Segoe UI", 12F);
+            Reg_msktxt_telefone_updt.Location = new Point(160, 280);
             Reg_msktxt_telefone_updt.Mask = "(00) 0 0000-0000";
             Reg_msktxt_telefone_updt.Name = "Reg_msktxt_telefone_updt";
-            Reg_msktxt_telefone_updt.Size = new Size(451, 27);
+            Reg_msktxt_telefone_updt.Size = new Size(451, 34);
             Reg_msktxt_telefone_updt.TabIndex = 11;
             // 
             // Reg_txt_nome_updt
             // 
-            Reg_txt_nome_updt.Location = new Point(141, 192);
+            Reg_txt_nome_updt.Font = new Font("Segoe UI", 12F);
+            Reg_txt_nome_updt.Location = new Point(160, 227);
             Reg_txt_nome_updt.Name = "Reg_txt_nome_updt";
-            Reg_txt_nome_updt.Size = new Size(450, 27);
+            Reg_txt_nome_updt.Size = new Size(450, 34);
             Reg_txt_nome_updt.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(50, 190);
+            label3.Location = new Point(53, 233);
             label3.Name = "label3";
             label3.Size = new Size(75, 28);
             label3.TabIndex = 2;
@@ -105,7 +118,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(56, 266);
+            label1.Location = new Point(53, 331);
             label1.Name = "label1";
             label1.Size = new Size(68, 28);
             label1.TabIndex = 0;
@@ -115,21 +128,11 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(34, 229);
+            label5.Location = new Point(53, 283);
             label5.Name = "label5";
             label5.Size = new Size(93, 28);
             label5.TabIndex = 4;
             label5.Text = "Telefone: ";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(250, 30);
-            label8.Name = "label8";
-            label8.Size = new Size(206, 28);
-            label8.TabIndex = 14;
-            label8.Text = "Alterar informações:";
             // 
             // UpdateUserForm
             // 
@@ -137,12 +140,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 589);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             MaximumSize = new Size(930, 636);
             MinimumSize = new Size(930, 636);
             Name = "UpdateUserForm";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "UpdateUserForm";
+            Text = "Atualizar dados";
             Load += UpdateUserForm_Load;
             Controls.SetChildIndex(panel1, 0);
             panel1.ResumeLayout(false);

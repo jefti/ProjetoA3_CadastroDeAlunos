@@ -74,7 +74,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(24, 56);
+            label1.Location = new Point(26, 51);
             label1.Name = "label1";
             label1.Size = new Size(70, 28);
             label1.TabIndex = 3;
@@ -178,12 +178,16 @@
             Controls.Add(Graee_comb_disci);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             MaximumSize = new Size(930, 636);
+            MdiChildrenMinimizedAnchorBottom = false;
             MinimumSize = new Size(930, 636);
             Name = "GradesPage";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "GradesPage";
+            Text = "Cursos Ativos";
             Load += GradesPage_Load;
             Controls.SetChildIndex(panel2, 0);
             Controls.SetChildIndex(panel1, 0);

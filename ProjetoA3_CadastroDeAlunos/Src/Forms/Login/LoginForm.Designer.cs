@@ -107,9 +107,9 @@
             label3.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(312, 67);
             label3.Name = "label3";
-            label3.Size = new Size(295, 54);
+            label3.Size = new Size(270, 54);
             label3.TabIndex = 7;
-            label3.Text = "Tela de Acesso";
+            label3.Text = "Tela de Login";
             // 
             // panel1
             // 
@@ -144,9 +144,12 @@
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             MaximumSize = new Size(930, 636);
             MinimumSize = new Size(930, 636);
             Name = "LoginForm";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tela de login";
             TopMost = true;

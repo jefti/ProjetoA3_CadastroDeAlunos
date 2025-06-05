@@ -36,10 +36,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 53);
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(39, 42);
             label1.Name = "label1";
-            label1.Size = new Size(230, 28);
+            label1.Size = new Size(453, 54);
             label1.TabIndex = 1;
             label1.Text = "Seu histórico de cursos";
             // 
@@ -49,7 +49,7 @@
             Hist_DtGrd_Cursos.AllowUserToDeleteRows = false;
             Hist_DtGrd_Cursos.AllowUserToResizeRows = false;
             Hist_DtGrd_Cursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Hist_DtGrd_Cursos.Location = new Point(39, 84);
+            Hist_DtGrd_Cursos.Location = new Point(39, 99);
             Hist_DtGrd_Cursos.Name = "Hist_DtGrd_Cursos";
             Hist_DtGrd_Cursos.RowHeadersWidth = 51;
             Hist_DtGrd_Cursos.Size = new Size(834, 450);
@@ -62,12 +62,15 @@
             ClientSize = new Size(912, 589);
             Controls.Add(Hist_DtGrd_Cursos);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             MaximumSize = new Size(930, 636);
             MinimumSize = new Size(930, 636);
             Name = "HistoricalPage";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HistoricalPage";
+            Text = "Histórico de cursos";
             Load += HistoricalPage_Load;
             Controls.SetChildIndex(label1, 0);
             Controls.SetChildIndex(Hist_DtGrd_Cursos, 0);

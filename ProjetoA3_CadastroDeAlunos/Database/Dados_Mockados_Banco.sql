@@ -27,7 +27,7 @@ VALUES
 
 INSERT INTO Usuario (Email, Senha, Nome, Cpf, Telefone, Tipo, Endereco)
 VALUES
-('admin@email.com', '123', 'Administrador', '118883344556', '84987999955', 'administrador', 'Rua do Saber, 789');
+('admin@email.com', '123', 'Administrador', '99910010099', '84987999955', 'administrador', 'Rua do Saber, 789');
 
 INSERT INTO Administrador (IdUsuario)
 VALUES (7);

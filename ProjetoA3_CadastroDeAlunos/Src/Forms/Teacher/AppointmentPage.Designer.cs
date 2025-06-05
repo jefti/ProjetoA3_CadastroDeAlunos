@@ -73,7 +73,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(59, 59);
+            label2.Location = new Point(12, 59);
             label2.Name = "label2";
             label2.Size = new Size(88, 28);
             label2.TabIndex = 5;
@@ -121,12 +121,15 @@
             Controls.Add(label1);
             Controls.Add(Appointment_DataBind_Nota);
             Controls.Add(Appointment_combo_curso);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             MaximumSize = new Size(930, 636);
             MinimumSize = new Size(930, 636);
             Name = "AppointmentPage";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AppointmentPage";
+            Text = "Apontamento de notas";
             Load += AppointmentPage_Load;
             Controls.SetChildIndex(Appointment_combo_curso, 0);
             Controls.SetChildIndex(Appointment_DataBind_Nota, 0);

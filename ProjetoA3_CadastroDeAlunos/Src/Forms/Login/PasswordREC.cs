@@ -73,5 +73,10 @@ namespace ProjetoA3_CadastroDeAlunos.Src.Forms.Login
         {
             this.NavToLogin();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
